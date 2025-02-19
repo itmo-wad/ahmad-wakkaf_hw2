@@ -1,0 +1,167 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: #0F253C; /* Default text color */
+    background: linear-gradient(135deg, #0F253C, #C27103, #828477); /* Gradient background */
+  }
+  
+  /* Profile grid layout */
+  .profile-grid {
+    display: flex; /* Use flexbox for horizontal layout */
+    gap: 20px; /* Space between sections */
+    max-width: 1200px; /* Limit the width of the grid */
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Profile section styling */
+  .profile-section {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Profile Information Section */
+  .profile-information {
+    flex: 2; /* Takes more space */
+  }
+  
+  /* Change Password Section */
+  .change-password {
+    flex: 1; /* Takes less space */
+    height: 290px;
+  }
+  
+  /* Create New Account and Logout Section */
+  .account-actions {
+    flex: 1; /* Takes less space */
+    height: 127px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between buttons */
+  }
+  
+  /* Profile container styling */
+  .profile-container {
+    text-align: center;
+  }
+  
+  /* Profile picture styling */
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 1px solid black;
+  }
+  
+  /* Profile information styling */
+  .profile-info {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .profile-info p {
+    margin: 10px 0;
+    font-size: 17px;
+    color: #0F253C;
+    text-align: center;
+  }
+  
+  .profile-info strong {
+    color: #C27103; /* Orange color for labels */
+  }
+  
+  /* Input field styling */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #828477; /* Gray border color */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #0F253C; /* Dark blue text color */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  }
+  
+  input::placeholder {
+    color: #828477; /* Gray placeholder text */
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #C27103; /* Orange button color */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  button:hover {
+    background-color: #A56200; /* Darker orange on hover */
+  }
+  
+  /* Create Account Button Styling */
+  .create-account-button {
+    background-color: #0F253C; /* Dark blue button color */
+  }
+  
+  .create-account-button:hover {
+    background-color: #081923; /* Darker blue on hover */
+  }
+  
+  /* Logout Button Styling */
+  .logout-button {
+    background-color: #828477; /* Gray button color */
+  }
+  
+  .logout-button:hover {
+    background-color: #6c6d63; /* Darker gray on hover */
+  }
+
+    /* Notification styling */
+.notification {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.notification.success {
+  position: fixed;
+  top:0;
+  
+  background-color: #d4edda; /* Light green */
+  color: #155724; /* Dark green */
+  border: 1px solid #c3e6cb;
+}
+
+.notification.error {
+  position: fixed;
+  top:0;
+  background-color: #f8d7da; /* Light red */
+  color: #721c24; /* Dark red */
+  border: 1px solid #f5c6cb;
+}
+
+.pass-pop{
+  color:red;
+}
+
+#popup {
+  color: red;
+}
+

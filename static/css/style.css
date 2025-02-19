@@ -1,0 +1,161 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+    background-image: url('/static/images/background.jpg'); /* Add background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #0F253C; /* Default text color */
+  }
+  
+  /* Shared container styling for login, signup, and profile */
+  .login-container,
+  .signup-container,
+  .profile-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better readability */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    width: 350px;
+    text-align: center;
+  }
+  
+  /* Shared heading styling for login, signup, and profile */
+  .login-container h2,
+  .signup-container h2,
+  .profile-container h2 {
+    margin-bottom: 25px;
+    color: #0F253C; /* Dark blue color */
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  /* Shared input field styling for login, signup, and profile */
+  .login-container input,
+  .signup-container input,
+  .profile-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #828477; /* Gray border color */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #0F253C; /* Dark blue text color */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  }
+  
+  .login-container input::placeholder,
+  .signup-container input::placeholder,
+  .profile-container input::placeholder {
+    color: #828477; /* Gray placeholder text */
+  }
+  
+  /* Shared button styling for login, signup, and profile */
+  .login-container button,
+  .signup-container button,
+  .profile-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #C27103; /* Orange button color */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  /* Shared hover effect for buttons */
+  .login-container button:hover,
+  .signup-container button:hover,
+  .profile-container button:hover {
+    background-color: #A56200; /* Darker orange on hover */
+  }
+  
+  /* Shared signup button styling */
+  .login-container .signup-button,
+  .signup-container .signup-button,
+  .profile-container .signup-button {
+    background-color: #0F253C; /* Dark blue button color */
+  }
+  
+  /* Shared hover effect for signup button */
+  .login-container .signup-button:hover,
+  .signup-container .signup-button:hover,
+  .profile-container .signup-button:hover {
+    background-color: #081923; /* Darker blue on hover */
+  }
+  
+  /* Shared link styling for login, signup, and profile */
+  .login-container a,
+  .signup-container a,
+  .profile-container a {
+    color: #C27103; /* Orange link color */
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .login-container a:hover,
+  .signup-container a:hover,
+  .profile-container a:hover {
+    color: #A56200; /* Darker orange on hover */
+  }
+  
+  /* Profile-specific styles */
+  .profile-container .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .profile-container .notification {
+    background-color: #ffcccc; /* Light red background for notifications */
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #cc0000; /* Red text for notifications */
+  }
+  
+  .profile-container .profile-info {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .profile-container .profile-info p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #0F253C;
+  }
+  
+  .profile-container .profile-info strong {
+    color: #C27103; /* Orange color for labels */
+  }
+
+  /* Notification styling */
+.notification {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.notification.error {
+  background-color: #f8d7da; /* Light red */
+  color: #721c24; /* Dark red */
+  border: 1px solid #f5c6cb;
+}
+
+
+
+

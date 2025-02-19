@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <link rel="stylesheet" href="/static/css/profile-style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div id="popup" class="notification {{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <div class="profile-grid">
+    <!-- Profile Information Section -->
+    <section class="profile-section profile-information">
+      <div class="profile-container">
+        <h2>Profile Information</h2>
+        <img src="{{ profile_picture }}"  alt="Profile Picture" class="profile-picture" style="cursor: pointer;" onclick="document.getElementById('profile-picture-input').click()">
+        <form action="/profile" method="POST" enctype="multipart/form-data">
+          <input type="file" name="profile_picture" id="profile-picture-input" accept="image/*" style="display: none; cursor: pointer;">
+          <button type="submit">Update Profile Picture</button>
+        </form>
+        <div class="profile-info">
+          <p><strong>Username:</strong> {{ username }}</p>
+          <p><strong>Email:</strong> {{ email }}</p>
+        </div>
+        <form action="/profile" method="POST" id="update-profile-form">
+          <input type="text" name="new-username" id="new-username" placeholder="New Username" required>
+          <input type="email" name="new-email" id="new-email" placeholder="New Email" required>
+          <button type="submit">Update Information</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Change Password Section -->
+    <section class="profile-section change-password">
+      <div class="profile-container">
+        <h2>Change Password</h2>
+          {% if password_message %}
+            <p id="popup" class="pass-pop">{{ password_message }}</p>
+          {% endif %}
+        <form action="/profile" method="POST" id="change-password-form" >
+          <input type="password" name="current-password" id="current-password" placeholder="Current Password" required>
+          <input type="password" name="new-password" id="new-password" placeholder="New Password" required>
+          <button type="submit">Change Password</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Create New Account and Logout Section -->
+    <section class="profile-section account-actions">
+      <div class="profile-container">
+        <button class="create-account-button" onclick="window.location.href='/signup'">Create New Account</button>
+        <button class="logout-button" onclick="window.location.href='/login'">Logout</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="static/js/javascript.js"></script>
+</body>
+</html>
