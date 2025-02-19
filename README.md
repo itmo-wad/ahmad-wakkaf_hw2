@@ -62,6 +62,8 @@ This project implements an authentication feature for a web application, allowin
 
 <img src="https://github.com/ahmad-wakkaf/web-authentication/blob/main/screenshots/username-exist.png" alt="portfolio Image" align="center">
 
+<img src="https://github.com/ahmad-wakkaf/web-authentication/blob/main/screenshots/update-pic.png" alt="update picture"  align="center">
+
 ---
 
 ## 📧 Contact Me
